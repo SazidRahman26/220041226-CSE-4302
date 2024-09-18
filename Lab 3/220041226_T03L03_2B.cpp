@@ -29,11 +29,14 @@ class Medicine{
             sell = price - (discount * 1.0 /100.0) * price;
             return nos * sell;
         }
+        double getUnitPrice()
+        {
+            sell = price - (discount * 1.0 /100.0) * price;
+            return sell;
+        }
         void display()
         {
-
-            getSellingPrice(1);
-            cout << "MRP. of " << trad << " (" << gen <<") is BDT " << price << ". Current discount " << discount << "%. Selling price BDT " << sell << ".\n";
+            cout << "MRP. of " << trad << " (" << gen <<") is BDT " << price << ". Current discount " << discount << "%. Selling price BDT " << getUnitPrice() << ".\n";
         }
 };
 

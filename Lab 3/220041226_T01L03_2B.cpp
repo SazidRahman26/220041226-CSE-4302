@@ -24,8 +24,7 @@ int main()
 {
     Counter kounter;
     kounter.setIncrementStep(6);
-    kounter.setIncrementStep(6);
-    kounter.setIncrementStep(6);
+    kounter.increment();
     cout << kounter.getCount() << endl;
     kounter.resetCount();
     cout << kounter.getCount() << endl;

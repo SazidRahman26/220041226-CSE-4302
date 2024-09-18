@@ -24,7 +24,7 @@ class RationalNumber{
         void invert()
         {
             if(nume == 0)
-                cout << "You cannot assign 0 as denominator.\nInversion Failed." << endl;
+                cout << "You cannot assign 0 as denominator. Inversion Failed." << endl;
             else{
                 swap(nume, denom);
             }
