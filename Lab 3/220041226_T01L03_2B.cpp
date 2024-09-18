@@ -29,4 +29,5 @@ int main()
     cout << kounter.getCount() << endl;
     kounter.resetCount();
     cout << kounter.getCount() << endl;
+    return 0;
 }

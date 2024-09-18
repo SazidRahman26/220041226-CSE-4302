@@ -47,4 +47,5 @@ int main()
     n.assign(0, 5);
     n.invert();
     cout << n.convert() << endl;
+    return 0;
 }

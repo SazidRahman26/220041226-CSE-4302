@@ -40,9 +40,12 @@ class Medicine{
 int main()
 {
     Medicine m;
-    //m.assignName("Napa", "Paracetemol");
+    char name[] = "Napa";
+    char gen[] = "Paracetemol";
+    m.assignName(name, gen);
     m.assignPrice(1);
     m.setDiscountPercent(10);
     m.display();
-
+    cout << m.getSellingPrice(5) << endl;
+    return 0;
 }
