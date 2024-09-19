@@ -7,10 +7,16 @@ class Medicine{
     private:
         char trad[30];
         char gen[30];
-        double price = 0;
-        double sell = 0;
-        double discount = 5;
+        double price;
+        double sell;
+        double discount;
     public:
+        Medicine()
+        {
+            price = 0;
+            sell = 0;
+            discount = 0;
+        }
         void assignName(char name[], char genericName[])
         {
             strcpy(trad, name);
