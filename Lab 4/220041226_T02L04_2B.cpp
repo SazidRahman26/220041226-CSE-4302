@@ -22,7 +22,8 @@ class BankAccount
     }
     BankAccount(int Num, string Name, string Type, double CurBalance, double MinBalance) : accountNum(Num), name(Name), type(Type), curBalance(CurBalance), minBalance(MinBalance)
     {
-
+        TotAccountCreated++;
+        CurAccountCreated++;
     }
     void setNum(int accountNum)
     {
@@ -77,7 +78,7 @@ class BankAccount
         cout << "Account of " << name << " with account no " << accountNum << " is destroyed with a balance BDT " << curBalance << endl;
         CurAccountCreated--;
     }
-    double getBalance()
+    double getBalance() const
     {
         return curBalance;
     }
@@ -100,8 +101,7 @@ void display_stat()
 
 BankAccount Larger(const BankAccount A, const BankAccount B)
 {
-    double A_Balance;
-     A_Balance = A.getBalance();
+    double A_Balance = A.getBalance();
     double B_Balance = B.getBalance();
     if(A_Balance >= B_Balance)
         return A;
@@ -113,6 +113,8 @@ int main()
 {
     BankAccount Ashraful(1213, "Ashraful", "savings", 123321, 0);
     BankAccount Sazid(123413, "Ashraf", "savings", 1321, 23);
+    Ashraful.giveInterest();
+    Sazid.giveInterest();
     display_stat();
     return 0;
 }

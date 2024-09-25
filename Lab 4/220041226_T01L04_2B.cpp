@@ -9,7 +9,11 @@ class Calculator
 private:
     float value;
 public:
-    Calculator() : value(0)
+    Calculator() : value(0.0)
+    {
+
+    }
+    Calculator(int angle) : value(angle)
     {
 
     }
@@ -23,24 +27,24 @@ public:
     }
     float calculateSine()
     {
-        return sin(value*pi/180);
+        return sin(value*pi/180.0);
     }
     float calculateCosine()
     {
-        return cos(value*pi/180);
+        return cos(value*pi/180.0);
     }
     float calculateTangent()
     {
-        if(value == 90 || value == 270)
+        if(value == 90.0 || value == 270.0)
         {
             cout << "Invalid operation; undefined result." << endl;
             return -1;
         }
-        return tan(value*pi/180);
+        return tan(value*pi/180.0);
     }
     float calculateArcSine()
     {
-        int angle = pi*value/180;
+        int angle = pi*value/180.0;
         if(value > 1 || value < -1){
             cout << "Invalid operation: result undefined" << endl;
             return -1;
@@ -50,7 +54,7 @@ public:
     }
     float calculateArcCosine()
     {
-        int angle = pi*value/180;
+        int angle = pi*value/180.0;
         if(value > 1 || value < -1){
             cout << "Invalid operation: result undefined" << endl;
             return -1;
@@ -59,21 +63,21 @@ public:
     }
     float calculateArcTangent()
     {
-        int angle = pi*value/180;
+        int angle = pi*value/180.0;
         return atan(value);
     }
     void calculateForAngle(float paramAngle)
     {
         cout << "Sine: " << sin(paramAngle * pi / 180.0) << endl;
         cout << "Cosine: " << cos(paramAngle * pi / 180.0) << endl;
-        if(paramAngle == 90 || paramAngle == 270)
+        if(paramAngle == 90.0 || paramAngle == 270.0)
             cout << "Invalid operation: Undefined result!" << endl;
         else
             cout << "Tangent: " << tan(paramAngle * pi / 180.0) << endl;
     }
     void clear()
     {
-        value = 0;
+        value = 0.0;
     }
     void display()
     {
@@ -88,7 +92,7 @@ public:
 int main()
 {
     Calculator c1;
-    c1.setCurrent(50);
+    c1.setCurrent(50.0);
     cout << c1.calculateSine() << endl;
     cout << c1.calculateCosine() << endl;
     cout << c1.calculateTangent() << endl;
