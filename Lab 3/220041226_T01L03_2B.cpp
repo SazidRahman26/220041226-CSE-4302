@@ -3,9 +3,13 @@ using namespace std;
 
 class Counter{
     private:
-        int kount = 0;
+        int kount;
         int step;
     public:
+        Counter()
+        {
+            kount = 0;
+        }
         void setIncrementStep(int x){
             step = x;
         }

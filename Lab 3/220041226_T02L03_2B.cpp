@@ -6,28 +6,28 @@ class RationalNumber{
         int nume;
         int denom;
     public:
-        void assign(int numerator, int denominator)
+        int assign(int numerator, int denominator)
         {
             if(denominator == 0)
             {
-                cout << "You can not assign 0 as denominator." << endl;
-                return;
+                return -1;
             }
             nume = numerator;
             denom = denominator;
+            return 0;
         }
         double convert()
         {
             double res = nume * 1.0/denom;
             return res;
         }
-        void invert()
+        int invert()
         {
             if(nume == 0)
-                cout << "You cannot assign 0 as denominator. Inversion Failed." << endl;
-            else{
-                swap(nume, denom);
-            }
+                return -1;
+            swap(nume, denom);
+                return 0;
+
         }
         void print()
         {
@@ -38,14 +38,25 @@ class RationalNumber{
 int main()
 {
     RationalNumber n;
-    n.assign(2,0);
-    n.assign(2,3);
+    if(n.assign(2,0))
+    {
+        cout << "You can not assign 0 as denominator." << endl;
+    }
+    if(n.assign(2,3))
+    {
+        cout << "You can not assign 0 as denominator." << endl;
+    }
     n.print();
-    cout << n.convert() << endl;
-    n.invert();
-    cout << n.convert() << endl;
+    if(n.invert())
+        cout << "You can not assign 0 as denominator. Inversion failed!" << endl;
+    else
+        cout << n.convert() << endl;
+    n.print();
     n.assign(0, 5);
-    n.invert();
-    cout << n.convert() << endl;
+    if(n.invert())
+        cout << "You can not assign 0 as denominator. Inversion failed!" << endl;
+    else
+        cout << n.convert() << endl;
+    n.print();
     return 0;
 }
