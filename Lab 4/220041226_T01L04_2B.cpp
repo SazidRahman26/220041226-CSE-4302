@@ -41,20 +41,26 @@ public:
     float calculateArcSine()
     {
         int angle = pi*value/180;
+        if(value > 1 || value < -1){
+            cout << "Invalid operation: result undefined" << endl;
+            return -1;
+        }
         cout << angle << endl;
-        return asin(angle);
+        return asin(value);
     }
     float calculateArcCosine()
     {
         int angle = pi*value/180;
-        cout << angle << endl;
-        return acos(angle);
+        if(value > 1 || value < -1){
+            cout << "Invalid operation: result undefined" << endl;
+            return -1;
+        }
+        return acos(value);
     }
     float calculateArcTangent()
     {
         int angle = pi*value/180;
-        cout << angle << endl;
-        return atan(angle);
+        return atan(value);
     }
     void calculateForAngle(float paramAngle)
     {

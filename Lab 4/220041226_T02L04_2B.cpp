@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+
+
 class BankAccount
 {
   private:
@@ -9,10 +11,14 @@ class BankAccount
       string type;
       double curBalance;
       const double minBalance;
+      static int tax;
   public:
+    static int TotAccountCreated;
+    static int CurAccountCreated;
     BankAccount(double minBal) : minBalance(minBal)
     {
-
+        TotAccountCreated++;
+        CurAccountCreated++;
     }
     BankAccount(int Num, string Name, string Type, double CurBalance, double MinBalance) : accountNum(Num), name(Name), type(Type), curBalance(CurBalance), minBalance(MinBalance)
     {
@@ -62,15 +68,51 @@ class BankAccount
     }
     void giveInterest()
     {
-        curBalance = 1.03*curBalance - (0.1 * 0.03 * curBalance);
+        tax += (0.1 * 0.03 * curBalance);
+        curBalance = 1.03*curBalance - (0.1 * 0.03 * curBalance) ;
+
     }
     ~BankAccount()
     {
         cout << "Account of " << name << " with account no " << accountNum << " is destroyed with a balance BDT " << curBalance << endl;
+        CurAccountCreated--;
+    }
+    double getBalance()
+    {
+        return curBalance;
+    }
+    static double getTotalTax()
+    {
+        return tax;
     }
 };
 
+int BankAccount :: TotAccountCreated = 0;
+int BankAccount :: CurAccountCreated = 0;
+int BankAccount :: tax = 0;
+
+void display_stat()
+{
+    cout << "Total number of BankAccount objects created: " << BankAccount :: TotAccountCreated << endl;
+    cout << "Total number of BankAccount objects currently present: " << BankAccount :: CurAccountCreated << endl;
+    cout << "Total amount of source tax collected from all BankAccount: " << BankAccount :: getTotalTax() << endl;
+}
+
+BankAccount Larger(const BankAccount A, const BankAccount B)
+{
+    double A_Balance;
+     A_Balance = A.getBalance();
+    double B_Balance = B.getBalance();
+    if(A_Balance >= B_Balance)
+        return A;
+    else
+        return B;
+}
+
 int main()
 {
-
+    BankAccount Ashraful(1213, "Ashraful", "savings", 123321, 0);
+    BankAccount Sazid(123413, "Ashraf", "savings", 1321, 23);
+    display_stat();
+    return 0;
 }
