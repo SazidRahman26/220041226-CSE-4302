@@ -80,5 +80,5 @@ Employee::void getInfo()
 {
     cout << "Name : " << Getname();
     cout << "\nDate of birth (DD/MM/YYYY) : " << Getdateofbirth();
-    cout << "\nEnter Salary : " ;
+    cout << "\nEnter Salary : " << Getsalary() << "\n";
 }
