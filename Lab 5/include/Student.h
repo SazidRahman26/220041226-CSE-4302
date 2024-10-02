@@ -1,6 +1,8 @@
 #ifndef STUDENT_H
 #define STUDENT_H
-#include <string>
+
+#include <string.h>
+#include "Student.h"
 
 class Student
 {
@@ -37,6 +39,21 @@ class Student
         int generateID();
         void calculateGPA();
 
+        int Getquiz1();
+        void Setquiz1(int val);
+        int Getquiz2();
+        void Setquiz2(float val);
+        int Getquiz3();
+        void Setquiz3(int val);
+        int Getquiz4();
+        void Setquiz4(float val);
+        int Getmid();
+        void Setmid(int val);
+        int Getfinal();
+        void Setfinal(int val);
+        int Getattendence();
+        void Setattendence(int val);
+
     protected:
 
     private:
@@ -47,6 +64,7 @@ class Student
         string address;
         int year;
         float gpa;
+        int id;
         int quiz1;
         int quiz2;
         int quiz3;

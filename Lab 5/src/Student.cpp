@@ -1,4 +1,5 @@
 #include "Student.h"
+#include <string>
 
 Student::Student()
 {
@@ -19,13 +20,27 @@ Student::string Getsection() { return section; }
 Student::void Setsection(string val) { section = val; }
 Student::string Getaddress() { return address; }
 Student::void Setaddress(string val) { address = val; }
-Student::int Getyear() { return year; }
-Student::void Setyear(int val) { year = val; }
-Student::float Getgpa() { return gpa; }
-Student::void Setgpa(float val) { gpa = val; }
+
+Student::int Getquiz1() { return quiz1; }
+Student::void Setquiz1(int val) { quiz1 = val; }
+Student::int Getquiz2() { return quiz2; }
+Student::void Setquiz2(float val) { quiz2 = val; }
+Student::int Getquiz3() { return quiz3; }
+Student::void Setquiz3(int val) { quiz3 = val; }
+Student::int Getquiz4() { return quiz4; }
+Student::void Setquiz4(float val) { quiz4 = val; }
+
+Student::int Getmid() { return mid; }
+Student::void Setmid(int val) { mid = val; }
+Student::int Getfinal() { return final; }
+Student::void Setfinal(int val) { final = val; }
+Student::int Getattendence() { return attendence; }
+Student::void Setattendence(int val) { atten = val; }
+
+
 Student::int generateID()
 {
-    int id = 0;
+    id = 0;
     id = (year % 100) * 10000000;
     switch(dept)
     {
