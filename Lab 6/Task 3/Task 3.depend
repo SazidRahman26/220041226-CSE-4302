@@ -1,0 +1,37 @@
+# depslib dependency file v1.0
+1728446611 source:c:\users\cse\desktop\26\lab 6\task 3\main.cpp
+	<iostream>
+	"Celsius.h"
+	"Fahrenheit.h"
+	"Kelvin.h"
+
+1728446720 source:c:\users\cse\desktop\26\lab 6\task 3\src\fahrenheit.cpp
+	"Celsius.h"
+	"Fahrenheit.h"
+	"Kelvin.h"
+	<iostream>
+
+1728444964 c:\users\cse\desktop\26\lab 6\task 3\include\celsius.h
+	"Fahrenheit.h"
+	"Kelvin.h"
+	<iostream>
+
+1728445351 c:\users\cse\desktop\26\lab 6\task 3\include\fahrenheit.h
+	"Celsius.h"
+	"Kelvin.h"
+
+1728445721 c:\users\cse\desktop\26\lab 6\task 3\include\kelvin.h
+	"Celsius.h"
+	"Fahrenheit.h"
+
+1728446688 source:c:\users\cse\desktop\26\lab 6\task 3\src\kelvin.cpp
+	"Celsius.h"
+	"Fahrenheit.h"
+	"Kelvin.h"
+	<iostream>
+
+1728446191 source:c:\users\cse\desktop\26\lab 6\task 3\src\celsius.cpp
+	"Celsius.h"
+	"Fahrenheit.h"
+	"Kelvin.h"
+
