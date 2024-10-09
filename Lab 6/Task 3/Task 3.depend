@@ -5,13 +5,13 @@
 	"Fahrenheit.h"
 	"Kelvin.h"
 
-1728446720 source:c:\users\cse\desktop\26\lab 6\task 3\src\fahrenheit.cpp
+1728446745 source:c:\users\cse\desktop\26\lab 6\task 3\src\fahrenheit.cpp
 	"Celsius.h"
 	"Fahrenheit.h"
 	"Kelvin.h"
 	<iostream>
 
-1728444964 c:\users\cse\desktop\26\lab 6\task 3\include\celsius.h
+1728448328 c:\users\cse\desktop\26\lab 6\task 3\include\celsius.h
 	"Fahrenheit.h"
 	"Kelvin.h"
 	<iostream>
@@ -30,7 +30,7 @@
 	"Kelvin.h"
 	<iostream>
 
-1728446191 source:c:\users\cse\desktop\26\lab 6\task 3\src\celsius.cpp
+1728448342 source:c:\users\cse\desktop\26\lab 6\task 3\src\celsius.cpp
 	"Celsius.h"
 	"Fahrenheit.h"
 	"Kelvin.h"

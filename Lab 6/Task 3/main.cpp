@@ -12,8 +12,8 @@ int main()
     Fahrenheit f;
     Kelvin k;
 
-    f = k;
-    f.display();
+    k = c;
+    k.display();
     return 0;
 
 }

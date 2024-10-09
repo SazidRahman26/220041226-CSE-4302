@@ -39,7 +39,7 @@ Celsius::operator Fahrenheit() const
 {
     return Fahrenheit(temp*(9.0/5.0) + 32);
 }
-Celsius::operator Kelvin()
+Celsius::operator Kelvin() const
 {
     return Kelvin(temp + 273.15);
 }

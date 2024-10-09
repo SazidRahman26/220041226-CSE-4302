@@ -17,7 +17,7 @@ class Celsius
         void assign(float temperature);
         void display();
         operator Fahrenheit() const;
-        operator Kelvin();
+        operator Kelvin() const;
 
     protected:
 

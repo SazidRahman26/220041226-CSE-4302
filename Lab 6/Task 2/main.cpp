@@ -52,5 +52,6 @@ int main()
     l =lowest(ar, 10);
     for(int i = 0; i < 10; i++)
         ar[i].display();
+    sort(ar, 10);
     return 0;
 }
