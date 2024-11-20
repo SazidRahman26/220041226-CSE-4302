@@ -82,7 +82,7 @@ class BaseCharacter
             if(health <= 0)
             {
                 isCharacterAlive = false;
-                cout << name << " defeated! " << "Player wins!\n";
+                cout << name << " dies!";
             }
         }
 
