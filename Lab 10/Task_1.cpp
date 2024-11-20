@@ -82,7 +82,7 @@ class BaseCharacter
             if(health <= 0)
             {
                 isCharacterAlive = false;
-                cout << name << " defeated! ";
+                cout << name << " defeated! " << "Player wins!\n";
             }
         }
 
@@ -149,6 +149,17 @@ class Game
             playerAlive = 3;
         }
 
+        void start()
+        {
+            while(!isGameEnded)
+            {
+                if(isPlayerTurn)
+                    playerMove();
+                else
+                    bossMove();
+            }
+        }
+
         void playerMove()
         {
             char choice;
@@ -191,6 +202,7 @@ class Game
                     return;
                 }
             }
+            cout << endl;
             isPlayerTurn = false;
         }
 
@@ -231,11 +243,13 @@ class Game
                     return;
                 }
             }
+            cout << endl;
             isPlayerTurn = true;
         }
 };
 
 int main()
 {
-
+    Game game;
+    game.start();
 }
